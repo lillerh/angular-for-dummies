@@ -8,16 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   intervals: number[]=[];
-  oddNumber = false;
-  evenNumber = false;
 
-  onEmittingNumbers(counter: any){
+  onEmittingNumbers(counter: number){
     this.intervals.push(counter);
-    console.log(this.oddNumber);
-
-    console.log(this.evenNumber);
-
-    console.log(this.intervals);
-
   }
 }
