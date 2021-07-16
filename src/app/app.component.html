@@ -2,8 +2,13 @@
   <div class="row">
     <div class="col-xs-12">
 
-      <app-servers></app-servers>
+      <!-- <app-servers></app-servers> -->
+     <app-game-control (intervalGame)="onEmittingNumbers($event)"></app-game-control>
 
+    <div *ngFor="let item of intervals" >
+      <app-odd *ngIf="item%2!==0" [intervalNumber]="item"></app-odd>
+      <app-even *ngIf="item%2===0" [intervalNumber]="item"></app-even>
+    </div>
   </div>
 </div>
 </div>
